@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspector Tool Sandpit</title>
+    <style>
+        
+        
+    h1 {color: darkblue; font-family: sans-serif; display: block; align-self: center; padding-top: 15px; margin: 10px;}
+    h2 {color: darkgreen; font-family: 'Courier New', Courier, monospace; align-self: center; width: 500px;margin: 10px;}
+    body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+    }
+
+    .main { display: flex; flex-direction:column}
+    .topsection {
+        display: flex;
+        flex-direction:column;
+        align-items: normal;
+        
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(50, 10px);
+        grid-template-rows: repeat(10, 10px);
+        gap: 1px;
+        padding-top: 50px;
+    }
+
+    .grid-item {
+        width: 10px;
+        height: 10px;
+        background-color: #fff; /* Default color */
+    }
+
+    .textblobs {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .left1 {
+        font-family: 'Courier New', Courier, monospace;
+        color: aqua;
+        background-color: darkmagenta;
+        padding: 15px;
+        border-radius: 15px;
+        width: 250px;
+    }
+
+    .right1 {
+        font-family: 'Courier New', Courier, monospace;
+        color: orange;
+        background-color: darkslategray;
+        padding: 15px;
+        border-radius: 15px;
+        width: 250px;
+    }
+
+
+    .secret-hidden { background-color: black};
+
+    </style>
+    
+</head>
+<body>
+    <div class="grid-container">
+        <!-- Generate 100x30 grid cells - HINT: there are NO clues in this grid-container div - it's just too big! -->
+        <script>
+            for (let i = 0; i < 500; i++) {
+                document.write('<div class="grid-item" id="cell-' + i + '"></div>');
+            }
+        </script>
+
+</div>
+<!-- Search for clues below this line -->
+    <div class="main">
+        <div class="topsection">
+            <h1>Inspector Tool Sandpit</h1>
+            <h2>Right-click anywhere on this page and select "Inspect"</h2>
+        </div>
+        <div class="textblobs">
+            <div class="left1"> 
+                <h3>Left 1</h3>
+                <ul>
+                    <li>You could try changing the text in here</li>
+                </ul>
+            </div>
+            <div class="right1"> RightBlob </div>
+        </div>
+        
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

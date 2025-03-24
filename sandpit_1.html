@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        
+        h1 {color: darkblue; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; display: block;}
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+    }
+
+    .main { display: flex; flex-direction:column}
+    .topsection {
+        display: flex;
+        flex-direction:column;
+        align-items: normal;
+        
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(50, 10px);
+        grid-template-rows: repeat(30, 10px);
+        gap: 1px;
+    }
+
+    .grid-item {
+        width: 10px;
+        height: 10px;
+        background-color: #fff; /* Default color */
+    }
+    .secret-hidden { background-color: black};
+
+    </style>
+    
+</head>
+<body>
+    <div class="main">
+        <div class="topsection">
+            <h1 id="bean">Thanks for joining my DIY PD Session</h1>
+            <h2>Let's get started</h2>
+            <p>When Lewis gives you the go-ahead, right-click on this page and select "Inspect"</p>
+        </div>
+        
+        <div class="grid-container">
+                <!-- Generate 100x30 grid cells - HINT: there are NO clues in this grid-container div - it's just too big! -->
+                <script>
+                    for (let i = 0; i < 500; i++) {
+                        document.write('<div class="grid-item" id="cell-' + i + '"></div>');
+                    }
+                </script>
+    
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
